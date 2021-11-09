@@ -15,7 +15,7 @@ cargo run -- --gc-strategy copying --scheduler old --max-hp-for-gc $TWO_GB > cop
 gnuplot plot.gnuplot > copying_old_2gb.svg
 
 # Copying GC, new scheduler
-cargo run -- --gc-strategy copying --scheduler new > copying_old_new
+cargo run -- --gc-strategy copying --scheduler new > copying_new
 gnuplot plot.gnuplot > copying_new.svg
 
 # Compacting GC, old scheduler, 1 GiB max hp
@@ -27,5 +27,5 @@ cargo run -- --gc-strategy mark-compact --scheduler old --max-hp-for-gc $TWO_GB 
 gnuplot plot.gnuplot > compacting_old_2gb.svg
 
 # Compacting GC, new scheduler
-cargo run -- --gc-strategy mark-compact --scheduler new > compacting_old_new
+cargo run -- --gc-strategy mark-compact --scheduler new > compacting_new
 gnuplot plot.gnuplot > compacting_new.svg
