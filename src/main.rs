@@ -320,8 +320,6 @@ fn generate_points(config: RuntimeConfig) -> Points {
 
             println!("GC=NO, hp={}, high water={}", hp_, last_high_water);
         }
-
-        n_calls += 1;
     }
 
     println!("GCs={}, total_calls={}", num_gcs, n_calls);
